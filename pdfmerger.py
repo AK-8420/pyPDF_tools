@@ -1,5 +1,4 @@
 from argparse import ArgumentParser
-import glob
 import PyPDF4
 
 argparser = ArgumentParser(description='Merge some PDF files.')
@@ -13,7 +12,6 @@ argparser.add_argument('-o', '--out', type=str,
                         help='Specify filename of output')
 args = argparser.parse_args()
 
-#pdfs = glob.glob("*.pdf")
 merger = PyPDF4.PdfFileMerger()
 
 for p in args.pdfs:
