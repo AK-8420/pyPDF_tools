@@ -2,9 +2,8 @@ from argparse import ArgumentParser
 import PyPDF4
 
 argparser = ArgumentParser(description='Merge some PDF files.')
-argparser.add_argument('-f', '--files', type=str, nargs='+',
+argparser.add_argument('pdfs', type=str, nargs='+',
                         default='*.pdf',
-                        dest='pdfs',
                         help='Specify filenames of input')
 argparser.add_argument('-o', '--out', type=str,
                         default='out.pdf',
